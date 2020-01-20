@@ -145,6 +145,7 @@ void ConfigureWifi()
   WriteLog("[INFO] - WiFi connecting to", false);
   WriteLog(config.ssid, true);
   WiFi.mode(WIFI_STA);
+  WiFi.hostname("Jarolift-Dongle");
   WiFi.begin (config.ssid.c_str(), config.password.c_str());
   if (!config.dhcp)
   {
